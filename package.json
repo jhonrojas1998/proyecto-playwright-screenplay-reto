@@ -1,0 +1,37 @@
+{
+  "name": "proyecto-playwright-screenplay-reto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --require src/features/support/cucumberWorld.ts --require src/features/stepDefinitions/**/*.ts",
+    "test:execute": "cucumber-js",
+    "test:report": "serenity-bdd run --features .src/features",
+    "serenity-report": "npx serenity-bdd run --features .src/features",
+    "test:headed": "npx playwright test --headed",
+    "format": "prettier --write '**/*.{js,ts,json,md}'",
+    "lint": "eslint . --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Proyecto de pruebas API con Playwright, Cucumber y Screenplay",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@serenity-js/console-reporter": "^3.31.9",
+    "@serenity-js/core": "^3.31.9",
+    "@serenity-js/cucumber": "^3.31.9",
+    "@serenity-js/playwright": "^3.31.9",
+    "@serenity-js/rest": "^3.31.9",
+    "@serenity-js/serenity-bdd": "^3.31.9",
+    "@types/node": "^22.13.7",
+    "chai": "^5.2.0",
+    "dotenv": "^16.4.7",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unicorn": "^57.0.0",
+    "playwright": "^1.50.1",
+    "prettier": "^3.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
